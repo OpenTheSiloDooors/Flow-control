@@ -1,24 +1,28 @@
 public class App {
     public static void main(String[] args) {
-    //Created by Jacob Aaron Espinoza. Prints a loop from 1 to 100, declares whether they are even or odd, and adds all the numbers.
     
-        int sum = 0; //initializing variable
-    
-    // Loop from 1 to 100
-    for (int i = 1; i <= 100; i++) {
-        sum += i; // add all the numbers
+    // Initialize array
+    int[] arrayNums;
+    arrayNums = new int[100]; // Creating an array of 100 integers
 
-    // If the number is even, print even
-    if (i % 2 == 0) {
+    for (int x = 0; x < arrayNums.length; x++) {
+    arrayNums[x]=x+1;
+
+    }
+    // Loop from 1 to 100
+    for (int x = 0; x < arrayNums.length; x++) {
+    
+    // Check if the number is even
+    if (arrayNums[x] % 2 == 0) {
         
-        System.out.println(i + " is even");
-        } else
+        // If it's even, print even
+        System.out.println(arrayNums[x] + " is Even");
+        } 
+        
+        else
 
         // If it's not even, print odd
-        System.out.println(i + " is odd");
-
-    // Print all numbers and sum of all numbers
-    System.out.println("The sum is " +sum);
+        System.out.println(arrayNums[x] + " is Odd");
         }
     }
 }
